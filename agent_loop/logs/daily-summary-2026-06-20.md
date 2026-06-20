@@ -4,9 +4,16 @@
 
 ---
 
-## **NEEDS REVIEW** — Pipeline Could Not Execute: Repository Is Empty
+## **NEEDS REVIEW** — Pipeline Could Not Execute: Scripts Still Missing
 
-The AEMO daily pipeline was initiated on 2026-06-20 UTC, but **none of the four required pipeline scripts exist** in the repository. Both the local clone and the remote GitHub repository (`raei-2748/project-ergon`) are completely empty — no branches, no files, and no directory structure beyond the bare `.git` folder.
+The AEMO daily pipeline was initiated again on 2026-06-20 UTC (second run of the day). **None of the four required pipeline scripts exist** in the repository. Both the local clone and the remote GitHub repository (`raei-2748/project-ergon`) contain no `04_scripts/` directory on any branch.
+
+Two branches were checked:
+
+| Branch | Content | Has `04_scripts/`? |
+|--------|---------|-------------------|
+| `main` | `agent_loop/logs/` only | **No** |
+| `claude/relaxed-carson-r0ggwq` | `01_sources/literature_synthesis.md` only | **No** |
 
 The following scripts were expected and are all **missing**:
 
@@ -23,9 +30,10 @@ No data was fetched, no volatility metrics were computed, no hedge thresholds we
 
 ## What Was Checked
 
-- **Local filesystem:** `ls /home/user/Project-Ergon/` — only `.git/` directory present; `04_scripts/` does not exist.
-- **Remote GitHub repo:** `GET /repos/raei-2748/project-ergon/git/ref/heads/main` → `409 Git Repository is empty.` Branch listing returned an empty array.
-- Conclusion: the repository has never had any code committed to it. This is not a clone failure or a network issue — the repository itself is empty.
+- **Local filesystem:** `ls /home/user/Project-Ergon/` — only `agent_loop/` directory present; `04_scripts/` does not exist.
+- **Remote GitHub repo (main branch):** Root listing returned only `agent_loop/` — no `04_scripts/`.
+- **Remote GitHub repo (feature branch `claude/relaxed-carson-r0ggwq`):** Root listing returned only `01_sources/` — no `04_scripts/`.
+- Previous pipeline run on 2026-06-20 reported the same missing-script condition.
 
 ---
 
