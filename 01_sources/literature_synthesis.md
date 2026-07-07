@@ -572,4 +572,81 @@ Novelty claim under watch: Applying log-wealth maximisation (Kelly criterion) to
 
 ---
 
-*Next scan scheduled: 2026-07-07 · Sources: arXiv, SSRN, ScienceDirect, MDPI, OIES, CERRE, WattClarity, Energy-Storage.News, ReNewEconomy, AER, industry reports*
+## Scan: 2026-07-07
+
+**Process note:** This scan was carried out on a new branch, `claude/relaxed-carson-jr7n3s`, forked from `main` (which still has no `01_sources/` directory). Continuity was recovered by pulling forward `claude/relaxed-carson-tp3szc` (scan through 2026-07-06), confirmed as the newest and most complete of nineteen candidate `claude/relaxed-carson-*` branches before selection — see Outstanding operational issue below. Full-text fetches to `arxiv.org` and `ses.library.usyd.edu.au` returned HTTP 403 throughout this scan (search-snippet/abstract-level detail only); flagged wherever it limits confidence.
+
+### Topic 1 — NEM Electricity Hedging for Industrial Buyers
+
+| Paper / Source | Date | Venue | Relevance |
+|---|---|---|---|
+| *Renewing Reliability: Valuation and Credit Risk Adjustments for Renewable Power Purchase Agreements* (arXiv 2607.04781) | ~Jul 2026 | arXiv preprint | CVA/DVA valuation framework for wind PPAs — joint spot-price/output dynamics plus counterparty default risk. General/non-NEM; standard risk-neutral valuation, **not** Kelly/log-wealth. |
+| *Beyond the Fixed Price: Valuation and Risk of Non-Standard Renewable PPAs* (arXiv 2607.03115) | 3 Jul 2026 | arXiv preprint (Bartolini, Romagnoli, Santini — Univ. of Bologna) | Monte Carlo risk assessment for fixed-price PPA structures; empirical case study on the **Italian** market. No NEM/SA content, no Kelly/log-wealth. |
+| General sweep (ScienceDirect, SSRN, MDPI) | — | — | No new item on NEM industrial-buyer hedging beyond sources already logged (Griffith Univ. *Energy Policy* 2024 paper remains standing reference). |
+
+**Verdict (Topic 1, week of 30 Jun – 7 Jul 2026):** No new paper threatens novelty. Two adjacent PPA-valuation preprints surfaced but are non-NEM and use conventional risk-neutral/Monte Carlo valuation, not a Kelly/log-wealth objective.
+
+---
+
+### Topic 2 — Log-Wealth Maximisation / Kelly Criterion at Firm Level
+
+| Paper / Source | Date | Venue | Relevance |
+|---|---|---|---|
+| General sweep (arXiv, SSRN) for Kelly/log-wealth/log-optimal terms cross-referenced against energy/commodity procurement | — | arXiv, SSRN | No new paper combining a Kelly/log-wealth objective with firm-level energy procurement or commodity input-cost management. Hits remain generic portfolio-Kelly theory (e.g. SSRN "Bayesian Kelly Criterion with Parameter Uncertainty," Feb 2026) with no operations/energy angle. |
+| arXiv 1103.5973 — *A Utility Based Approach to Energy Hedging* | 2011 | arXiv | Re-confirmed, unchanged. Remains the closest prior-art overlap. |
+
+**Verdict (Topic 2, week of 30 Jun – 7 Jul 2026):** No new paper found. arXiv 1103.5973 remains the sole substantive prior-art risk, unchanged since 2026-06-29.
+
+---
+
+### Topic 3 — South Australian Electricity Market Volatility
+
+| Paper / Source | Date | Venue | Relevance |
+|---|---|---|---|
+| WattClarity / Energy-Storage.News / ReNewEconomy: SA price-cap event, 21–22 Jun 2026 | 21–22 Jun 2026 | Industry reporting | SA hit the **$20,300/MWh price cap twice in one evening** (LOR2 forecast + "worst wind drought in two years"); ~2h35m event, average clearing price ~$3,900/MWh. Grid-scale batteries captured an estimated AU$324,000 (NEMPulse data) but only 4 of 15 tracked SA batteries actively dispatched — direct empirical evidence of the extreme, thinly-hedgeable volatility regime the thesis targets. |
+| WattClarity: SA price events, 24 Jun 2026 (morning + afternoon) | 24 Jun 2026 | Industry reporting | SA spot exceeded $500/MWh twice in one day; attributed to continued low wind plus a Tailem Bend–Tungkillo 275kV line outage constraining Victoria→SA imports. |
+| Market Price Cap confirmation | Effective 1 Jul 2026 | AEMO / WattClarity | $23,200/MWh cap confirmed in effect; SA negative-price share reported running ~48.4% of intervals recently vs ~31% NEM-wide — reinforces the two-sided extreme-volatility framing (deep negative middays, cap-level evening spikes). |
+| General academic sweep (arXiv EPF/volatility) | — | arXiv | No new SA-specific academic paper surfaced this round. |
+
+**Verdict (Topic 3, week of 30 Jun – 7 Jul 2026):** No new academic paper threatens novelty. This was an active week for real SA price-spike events (21–22 Jun, 24 Jun) — strong, timely, citable empirical motivation material, not competing research.
+
+---
+
+### Topic 4 — Small Manufacturer Financial Resilience and Input Costs
+
+| Paper / Source | Date | Venue | Relevance |
+|---|---|---|---|
+| SA small-business electricity tariff increases, effective 1 Jul 2026 | Jul 2026 | energyplans.com.au / SA Business Chamber | SA small-business default/variable offers rise up to **29.8%** — among the steepest hikes nationally — while flat-rate/TOU tariffs elsewhere fall 6.8–14%/12.1%. SA retains the highest DMO reference price of any single-network zone. Direct empirical support for the "small-manufacturer balance-sheet constraints" motivation. |
+| SA automotive-parts manufacturer anecdote (35% electricity-cost increase in one year) | 2026 | Industry commentary (secondary source) | Illustrative case of margin pressure from electricity cost shocks. Not a primary filing — verify before formal citation. |
+| ICAEW: *Manufacturing — how to control energy costs to manage volatility* | Apr 2026 | ICAEW (practitioner) | Conventional procurement/budgeting guidance; no quantitative optimisation framework, no Kelly/log-wealth. |
+
+**Verdict (Topic 4, week of 30 Jun – 7 Jul 2026):** No academic paper found that threatens novelty. New empirical/industry material (SA tariff hikes, manufacturer anecdote) strengthens the real-world motivation for the small-manufacturer framing.
+
+---
+
+### Follow-up: Shuying Lai (USYD) PhD thesis — additional detail
+
+The thesis (already resolved as **NONE** in the 2026-07-01 scan; submitted Dec 2022, predates any 7-day window) was re-examined this scan via its derived/chapter publications, since the direct PDF again returned 403. Two independent chapter papers — *"Option-based portfolio risk hedging strategy for gas generator based on mean-variance utility model"* (Wiley *Energy Conversion and Economics*, 2022) and *"Risk hedging for gas power generation considering power-to-gas energy storage in three different electricity markets"* (*Applied Energy* 291, 2021) — confirm the thesis's objective function is **mean-variance utility**, not Kelly/log-wealth. This reinforces (does not reverse) the prior "no novelty threat" finding. One open detail remains: which three electricity markets the *Applied Energy* paper covers (NEM inclusion unconfirmed from abstract) — low-priority, optional follow-up only if the thesis is ever formally cited.
+
+---
+
+## Consolidated Novelty Assessment — 2026-07-07
+
+| Risk level | Item |
+|---|---|
+| **MEDIUM (unchanged)** | arXiv 1103.5973 — *A Utility Based Approach to Energy Hedging* (2011). Still the only substantive prior-art overlap on "log utility + energy hedging"; no new paper this week alters the assessment. |
+| **LOW (carried forward)** | arXiv 2604.27865 — *KellyBench* (Apr 2026). No new development; continue passive monitoring. |
+| **LOW (carried forward)** | OIES EL-61 (Jan 2026) — NEM risk taxonomy, no Kelly content. |
+| **LOW (carried forward)** | arXiv 2503.13056 — Deep Hedging of Green PPAs (Mar 2025). |
+| **NONE (carried forward)** | Giometti, *Energy Prices, Credit Risk, and Bank Lending Dynamics* (CEPR, Apr 2026). |
+| **NONE (new, informational)** | arXiv 2607.04781 and arXiv 2607.03115 — renewable PPA valuation preprints (~Jul 2026). Non-NEM, risk-neutral/Monte Carlo valuation, no Kelly/log-wealth. Useful PPA-methodology background only. |
+| **NONE (reinforced)** | Shuying Lai (USYD) PhD thesis — confirmed via chapter papers to use mean-variance utility, not Kelly/log-wealth; prior "no threat" resolution stands. |
+| **NONE detected** | No paper from 30 Jun – 7 Jul 2026 directly combines Kelly criterion / log-wealth maximisation with NEM industrial-buyer hedging or South Australian small-manufacturer risk management. |
+
+**Recommended action:** No change to the core novelty claim. Continue citing arXiv 1103.5973 explicitly and the established four-way novelty framing (log-wealth/Kelly objective; NEM contract structure; SA post-renewable-transition volatility regime; small-manufacturer balance-sheet constraints). Consider citing the 21–22 Jun and 24 Jun 2026 SA price-spike events and the 1 Jul 2026 SA small-business tariff increases (up to 29.8%) as fresh, dated empirical motivation material in the thesis introduction.
+
+**Outstanding operational issue — escalating, needs operator decision:** This is now the **nineteenth consecutive day** (2026-06-19 through 2026-07-07) this literature-synthesis file has lived only on throwaway branches, and this session's branch (`claude/relaxed-carson-jr7n3s`) is the **nineteenth unmerged branch** carrying it forward, none merged into `main`. Every daily run forks from `main`, which has never received this file, so continuity depends entirely on an agent manually rediscovering and pulling forward the most complete prior branch — a fragile, error-prone process that has now repeated for over two and a half weeks with no operator action taken on the standing recommendation. Separately, the AEMO data pipeline (`04_scripts/`) referenced by this project's other daily job has been missing from every branch for the same nineteen-day span, so no SA1 price data, volatility metrics, or hedge-threshold computations have been produced in that time either. **Recommend immediate operator action:** merge this file (and, separately, the pipeline scripts if they exist somewhere) to `main`, or repoint both scheduled jobs at a single persistent branch. This session did not merge to `main` unilaterally, per this branch's operating instructions against pushing elsewhere without explicit permission.
+
+---
+
+*Next scan scheduled: 2026-07-08 · Sources: arXiv, SSRN, ScienceDirect, MDPI, OIES, CERRE, WattClarity, Energy-Storage.News, ReNewEconomy, AER, industry reports*
